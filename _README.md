@@ -1,12 +1,12 @@
-# Project Name
+# Project Rshots
 
-> Pithy project description
+> Is to share you photo or anything you want with your calssmates 
 
 ## Team
 
-  - __Product Owner__: teamMember
-  - __Scrum Master__: teamMember
-  - __Development Team Members__: teamMember, teamMember
+  - __Product Owner__: Sajedah Al-Sheekh
+  - __Scrum Master__: Mohannad Bakkar
+  - __Development Team Members__: Mais Abu-Jarur, Mohammad Masaeed
 
 ## Table of Contents
 
@@ -20,15 +20,15 @@
 
 ## Usage
 
-> Some usage instructions
+> Upload and share memories with RBK classmates 
+> Comment, like or just view your classmates's images
 
 ## Requirements
 
-- Node 0.10.x
-- Redis 2.6.x
-- Postgresql 9.1.x
-- etc
-- etc
+- Node v7.5.0
+- MySql 9.1.x
+- Angular
+- Express
 
 ## Development
 

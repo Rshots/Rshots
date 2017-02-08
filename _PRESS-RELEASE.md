@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > RShots
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > RBK Students treasure chest of memories.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > Social plateform connecting collegues in ReBoot Kamp through imagery and viral communications.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > A plateform doesn't exist where you can share photos with unlimited duration and memory. A digital medium that facilitates greater connection.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > A safe haven of images where they are not lost and building greater connection to people
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  >"Who you know is a big part of who you are"
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Sign up and surf away
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > "The time spent in RBk was brief, but RShots galvanized memories into lifelong stories"
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > See what your classmates did next, sign up now!
