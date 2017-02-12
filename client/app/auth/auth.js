@@ -9,9 +9,9 @@ angular.module('Rshots.auth', [])
     Auth.signin($scope.user)
       .then(function (token) {
         // please change the link below to correct path and thanks 
-        $window.localStorage.setItem('....', token);
+        $window.localStorage.setItem('com.Rshots', token);
         // please change the link below to correct path and thanks 
-        $location.path('/....');
+        $location.path('/home');
       })
       .catch(function (error) {
         console.error(error);
@@ -21,9 +21,9 @@ angular.module('Rshots.auth', [])
   $scope.signup = function () {
     Auth.signup($scope.user)
       .then(function (token) {
-        $window.localStorage.setItem('....', token);
+        $window.localStorage.setItem('com.Rshots', token);
         // please change the link below to correct path and thanks 
-        $location.path('/....');
+        $location.path('/home');
       })
       .catch(function (error) {
         console.error(error);
