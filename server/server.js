@@ -3,7 +3,7 @@ var express = require ('express');
 var app = express ();
 var bodyParser = require ('body-parser');
 var mongoose = require ('mongoose');
-
+var path = require ('path');
  // Connect to Mongoose
  // Mohannad / guys //  please un commient the line below because its not running in my mac device
   // mongoose.connect('monogodb://localhost/test');
@@ -25,25 +25,11 @@ mongoose.connection.on('error',function (err) {
 mongoose.connection.on('disconnected', function () {  
   console.log('Mongoose default connection disconnected'); 
 });
-var x = '<!DOCTYPE html>'
-'<html>'
-	'<head>'
-		'<title>'
-		'</title>'	
-	'</head>'
-			'<body>'
-					'<form method="POST" enctype="multipart/form-data">'
-						'<input type="file" name="myimage">'
-						'<input type="submit" name="submit" value="submit">'
-					'</form>'
-			'</body>'
-'</html>'
  var db = mongoose.connection;
  app.get('/',function (req,res) {
  	// console.log(req)
- 	res.render(x)
+ 	res.send('Hello world')
  });
-
  app.listen(3000);
  console.log('Running at port 3000');
  module.exports = app;
