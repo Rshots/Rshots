@@ -1,7 +1,18 @@
 var linksController = require('../links/linkController.js');
 var userController = require('../users/userController.js');
 var helpers = require('./helpers.js'); // our custom middleware
+var express = require ('express');
+var multer  = require('multer');
+var upload = multer({ dest: 'client/uploads/' })
+var router = express.Router();
+router.get ('/',function(req,res,next){
+  res.send('response with a resource ')
+});
+router.post('/',upload.any(),function(req,res,next){
+  res.send(req.files);
+});
 
+module.exports = router ;
 module.exports = function (app, express) {
   app.get('/:code', linksController.navToLink);
 
