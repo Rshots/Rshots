@@ -1,0 +1,20 @@
+ <section class="jumbotron text-center">
+            <div  class="col-md-1" *ngFor="let img of images "  >
+          
+        <img class="img-circle" style="width:9%;height:19%" src="{{img.userPic}}">
+              <li> {{img.userName}}</li>
+                  <li class="media-heading">{{img.img_date}}</li>
+              <img class="album" data-src="{{img.img_data}}" >
+
+               <a  class="navbar-brand" href="#"        
+              [routerLink]="['/image/'+img._id]"  >Comments</a>
+              <hr>
+                  <br>
+          </div>
+ </section>
+
+
+
+
+
+

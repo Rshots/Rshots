@@ -1,33 +1,27 @@
-var linksController = require('../links/linkController.js');
-var userController = require('../users/userController.js');
-var helpers = require('./helpers.js'); // our custom middleware
-var express = require ('express');
-var multer  = require('multer');
-var upload = multer({ dest: 'client/uploads/' })
-var router = express.Router();
-router.get ('/',function(req,res,next){
-  res.send('response with a resource ')
-});
-router.post('/',upload.any(),function(req,res,next){
-  res.send(req.files);
-});
+var userController = require ('../database/controllers/userController.js');
+var imageController = require ('../database/controllers/imageController.js');
+var commentController = require ('../database/controllers/commentController.js')
 
-module.exports = router ;
 module.exports = function (app, express) {
-  app.get('/:code', linksController.navToLink);
 
-  app.post('/api/users/signin', userController.signin);
-  app.post('/api/users/signup', userController.signup);
-  app.get('/api/users/signedin', userController.checkAuth);
+ /*								Api User route
+ / ============================================================================== */
+		app.post('/api/login', userController.login);
 
-  // authentication middleware used to decode token and made available on the request
-  // app.use('/api/links', helpers.decode);
-  app.get('/api/links/', linksController.allLinks);
-  app.post('/api/links/', linksController.newLink);
+ /*								Api Image route
+ / ============================================================================== */
+		app.get('/api/getall', imageController.getall);
+		app.post('/api/addImage', imageController.addImage);
+		app.get('/api/getAllById/:id', imageController.getAllById);
+		app.get('/api/getImgById/:id', imageController.getImgById);
+		app.delete('/api/removeImgeById/:id', imageController.removeImgeById);
 
-  // If a request is sent somewhere other than the routes above,
-  // send it through our custom error handler
-  app.use(helpers.errorLogger);
-  app.use(helpers.errorHandler);
-};
+/*								Comment  route									 */
+//=============================================================================
+		app.post('/api/insertComment', commentController.insertComment);
+		app.put('/api/editComment',commentController.editComment);
+		app.delete('/api/removeCommentById/delete/:_id',commentController.removeCommentById);
+		app.get('/api/getCommentsById/:advId',commentController.getCommentsById);		
 
+	};
+	
